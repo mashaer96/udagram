@@ -8,47 +8,47 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
       - node/install
+      - checkout
       - aws-cli/setup
       - eb/setup
       - run:
-          name: Install Frontend
-          command: |
-            npm run install:frontend
+            name: Install Frontend
+            command: |
+              npm run install:frontend
       - run:
-          name: Install Backend
-          command: |
-            npm run install:backend
+            name: Install Backend
+            command: |
+              npm run install:backend
       - run:
-          name: Build Frontend
-          command: |
-            npm run build:frontend
+            name: Build Frontend
+            command: |
+              npm run build:frontend
       - run:
-          name: Build Backend
-          command: |
-            npm run build:backend
+            name: Build Backend
+            command: |
+              npm run build:backend
       - run:
-          name: Test Frontend
-          command: |
-            npm run test:frontend
+            name: Test Frontend
+            command: |
+              npm run test:frontend
       - run:
-          name: Test Backend
-          command: |
-            npm run test:backend
+            name: Test Backend
+            command: |
+              npm run test:backend
       - run:
-          name: Deploy Frontend
-          command: |
-            npm run deploy:frontend
+            name: Deploy Frontend
+            command: |
+              npm run deploy:frontend
       - run:
-          name: Deploy Backend
-          command: |
-            npm run deploy:backend
+            name: Deploy Backend
+            command: |
+              npm run deploy:backend
 workflows:
-  deployment-workflow:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - main
+    build-deploy:
+      jobs:
+        - build:
+            filters:
+              branches:
+                only: 
+                  - main
