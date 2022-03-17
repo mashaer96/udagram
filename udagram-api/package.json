@@ -8,7 +8,7 @@
     "tsc": "npx tsc",
     "dev": "ts-node-dev --respawn --transpileOnly .\\src\\server.ts",
     "prod": "npx tsc && node .\\www\\server.js",
-    "build": "npx tsc && @powershell copy .npmrc www\\.npmrc && @powershell copy package.json www\\package.json",
+    "build": "npx tsc && copy .npmrc www\\.npmrc && copy package.json www\\package.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "chmod +x .\\bin\\deploy.sh && .\\bin\\deploy.sh"
   },
