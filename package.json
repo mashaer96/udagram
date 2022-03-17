@@ -7,7 +7,7 @@
         "build:backend": "cd udagram-api && npm run build",
         "deploy:frontend": "cd udagram-frontend && npm run deploy",
         "deploy:backend": "cd udagram-api && npm run deploy",
-        "test:frontend": "cd udagram-frontend && run npm test",
+        "test:frontend": "cd udagram-frontend && npm run test",
         "test:backend": "cd udagram-api && npm run test"
     },
     "devDependencies": {}
