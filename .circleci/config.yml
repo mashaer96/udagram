@@ -45,10 +45,10 @@ jobs:
             command: |
               npm run deploy:backend
 workflows:
-    build-deploy:
+    build-deploy-workflow:
       jobs:
         - build:
             filters:
               branches:
                 only: 
-                  - main
+                  - master
