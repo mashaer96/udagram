@@ -11,3 +11,4 @@ Progressive Web Application using **ionic** and **Angular** as front end, **Expr
 6. PWA renders the response to the UI.
 
 ### Diagram
+![Infrastructure](https://user-images.githubusercontent.com/69659353/159093269-b85e9636-2931-4c1f-8d65-fe70fb120531.png)
